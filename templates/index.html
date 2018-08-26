@@ -1,0 +1,36 @@
+<!DOCTYPE html> {% extends "bootstrap/base.html" %}
+<html>
+
+<head>
+    {% block title %}Todo App{% endblock %}
+</head>
+{% block content %}
+<h1>Todo List</h1>
+<div>Add a new Todo item
+    <form action="{{ url_for('add') }}" method="POST">
+        <input type="text" name="todoitem">
+        <input type="submit" value="Add Item">
+    </form>
+</div>
+<div>
+    <h2>Incomplete Items</h2>
+    <ul>
+        {% for todo in incomplete %}
+        <li>
+            {{todo.text}}
+            <a href="{{ url_for('complete', id=todo.id) }}">Mark as Complete</a>
+        </li>
+        {% endfor %}
+    </ul>
+    <h2>Completed Items</h2>
+    <ul>
+        {% for todo in complete %}
+        <li>
+            {{todo.text}}
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
+
+</html>

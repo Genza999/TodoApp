@@ -1,0 +1,1 @@
+certifi==2018.4.16 chardet==3.0.4 click==4.1 Flask==0.12 Flask-Script==2.0.6 idna==2.7 itsdangerous==0.24 Jinja2==2.10 MarkupSafe==1.0 requests==2.13.0 tinydb==3.10.0 urllib3==1.23 virtualenv==16.0.0 Werkzeug==0.14.1
